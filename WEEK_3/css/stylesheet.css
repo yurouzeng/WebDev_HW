@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700');
+
+html {
+	font-family: sans-serif;
+	line-height: 22px;
+	background: blanchedalmond;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	display: inline-block;
+	padding-left: 63px;
+}
+
+header {
+	float: right;
+	font-family: 'Oswald', sans-serif;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+nav {
+	display: inline-block;
+	margin: 5px 0px 0px 0px;
+	position: fixed;
+	right: 0;
+}
+
+nav ul {
+	list-style-type: none;
+	text-align: center;
+	padding: 0;
+}
+
+nav li {
+	width: 120px;
+	display: inline-block;
+}
+
+nav a {
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	transition: all 1s;
+}
+
+nav a:hover {
+	color: grey;
+}
+
+main {
+	width: 1500px;
+	text-align: justify;
+	margin: 100px 0px 0px 30px;
+	font-family: 'Libre Baskerville', serif;
+}
+
+article {
+	float: left;
+	width: 800px;
+	background-color: white;
+	padding: 0px 25px;
+	border: 3px solid #ccc;
+}
+
+aside {
+	float: left;
+	background-color: white;
+	width: 300px;
+	min-height: 200px;
+	margin: 0px 10px;
+	padding-left: 20px;
+	border: 3px solid #ccc;
+}
+
+.recipe_title {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.info {
+	float: left;
+	width: 30%;
+	margin: 20px 5px;
+	font-style: italic;
+} 
+
+.ingredients {
+	float: left;
+	width: 45%;
+	margin-left: 100px;
+	line-height: 24px;
+}
+
+.info ul,
+.ingredients ul {
+	list-style-type: none;
+	margin: 0px -40px;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: block;
+}
