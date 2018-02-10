@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>title</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <style type ="text/css" media="screen">
+    html, body {
+		margin: 0;
+    }
+
+    header,
+    footer {
+		min-height: 50px;
+		background-color: black;
+		color: white;
+    }
+
+    h1 {
+    	margin: 0;
+    }
+
+    header {
+    	position: fixed;
+    	width: 100%;
+    	top: 0;
+    }
+
+    footer {
+    	position: fixed;
+    	bottom: 0;
+    	left: 0;
+    	right: 0;
+    	/* top: 0; would fill the entire screen */
+    }
+
+    main {
+    	padding-top: 75px;
+    }
+
+	.absolute-t-r {
+		width: 200px;
+		height: 200px;
+		border: 2px solid red;
+		position: absolute;
+		top: 30px;
+		right: 50px;
+	}
+
+	.relative-t-r {
+		width: 200px;
+		height: 200px;
+		border: 2px solid green;
+		position: relative;
+		top: 30px;
+		right: 50px;
+	}
+
+	.abs-in-rel {
+		width: 100px;
+		height: 100px;
+		border: 5px solid blue;
+		position: absolute;
+		top: 0;
+		left: 50px;
+	}
+
+	.relative-wrapper {
+		position: relative;
+		height: 100vh; 
+		width: 90vh;
+		/* completely depending on the browser window */
+		border: 2px dotted purple;
+	}
+
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Fixed Position header</h1>
+	</header>
+
+	<main>
+		<div class="absolute-t-r">
+			<p>im an absolutely positioned div, i will by default position myself based on the corners of the browser.</p>
+		</div>
+
+		<div class="relative-t-r">
+			<p>im an relatively positioned div, i will position myself relative to where i should have rendered by default.</p>
+		</div>
+
+		<div class="relative-wrapper">
+			<div class="abs-in-rel">
+			<p>i am an absolutely positioned div in a relatively positioned div.</p>
+		</div>
+		</div>
+	</main>
+
+	<footer>fixed position footer</footer>
+</body>
+
+</html>

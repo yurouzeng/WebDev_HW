@@ -1,0 +1,39 @@
+.clearfix::after {
+	display: block;
+	clear: both;
+	/* for cross browser and legacy browser compatability */
+	height: 0;
+	font-size: 0;
+	content: '';
+	/* for the super paranoid */
+	visibility: hidden;
+}
+
+body {
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+div,
+header,
+footer,
+section,
+article,
+aside,
+main {
+	min-height: 100px;
+	background-color: rgba(0, 100, 255, 0.2);
+}
+
+/* @import 'layout-1.css'; */
+
+
+
+
+
+
+
+
