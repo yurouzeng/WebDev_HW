@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS 101</title>
+</head>
+<body>
+<!-- <body onload="sumValues(182,42);"> -->
+
+<!-- 	<button onclick="sumValues(40,500);">click me</button> -->
+	<button onclick="switchOnOff();">to toggle on off</button>
+	<button onclick="countToN(100);">to count to 100</button>
+
+<script type="text/javascript">
+	/*	
+	var myVar = 'number';
+	console.log(myVar);
+
+	myVar = '4' + '4';
+	console.log(typeof(myVar));
+
+	myVar = myVar*2;
+	console.log(myVar);
+	console.log(typeof(myVar));
+
+	myVar = '77';
+	console.log(myVar);
+	myVar = parseFloat(myVar);
+	console.log(typeof(myVar));
+	*/
+
+	//insert variables into a string message to a user
+	/*
+	var temp = 73;
+	var message = 'Todays temperature is ' + temp + ' degrees F.';
+	console.log(message);
+	*/
+
+	// use parameters in a function to sum 2 values on click and on load
+	/*
+	function sumValues(a,b) {
+		var sum = a+b;
+		console.log('Your total charges are: ' + sum);
+	}
+
+	sumValues(10, 675);
+	*/
+
+	//booleans
+	var isOn = true;
+
+	function switchOnOff() { //=== will make sure it is true and if its the right data type
+		if (isOn === true) {
+			alert('isOn is currently set to true, switching to false now');
+			isOn = false;
+		} else {
+			alert ('isOn is currently set to false, switching to true now');
+			isOn = true;
+		}
+	}
+
+	function countToN(n) {
+		for (var i = 0; i < n; i++) {
+			console.log(i);
+		}
+	}
+
+</script>
+</body>
+</html>

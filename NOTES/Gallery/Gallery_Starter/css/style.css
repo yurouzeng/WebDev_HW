@@ -51,14 +51,22 @@ header {
 	position: fixed;
 	height: 50px;
 	margin-bottom: 10px;
-	z-index: 10px;
-	background-color: white;
+	z-index: 10;
+  	background-color: black;
+ 	background: url(../img/cheap_diagonal_fabric.png);
 }
 
 header h1 {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
+	color: black;
+	font-family: 'Permanent Marker', cursive;
+}
+
+nav {
+  float: right;
+  display: inline-block;
 }
 
 nav ul {
@@ -66,7 +74,7 @@ nav ul {
 	text-align: center;
 	padding: 0;
 	margin: 0;
-	background-color: rbga(40px, 40px, 40px, 0.3);
+	background-color: rgba(40,40,40, 0.1);
 }
 
 nav li {
@@ -96,4 +104,73 @@ nav a.active {
 	color: #444;
 }
 
+/* transforms */
 
+.scaleUp {
+  transform: scale(1.2);
+  filter: grayscale(50%);
+  x-index: 100;
+  transition: all 3s ease;
+}
+
+.scaleUp:hover {
+  filter: grayscale(0%);
+  x-index: 100;
+}
+
+.scaleX {
+  transform: scale(2, 1);
+}
+
+.scaleY {
+  transform: scale(1, 2);
+}
+
+.skewX {
+	transform: skew(20deg);
+}
+
+.skewY {
+	transform: skew(-20deg);
+}
+
+.skewBoth {
+	transform: skew(10deg, 30deg);
+}
+
+.rotX {
+	transform: rotateX(120deg);
+}
+
+.rotY {
+	transform: rotateY(120deg);
+}
+
+.rotZ {
+	transform: rotateZ(120deg);
+}
+
+.scaleOnHover {
+	transform: scale(0.9);
+	transition: all 5s ease;
+}
+
+.scaleOnHover:hover {
+	transform: scale(2);
+}
+
+.skewOnHover {
+	transition: all 3s linear;
+}
+
+.skewOnHover:hover {
+	transform: skew(20deg);
+}
+
+.rotOnHover {
+	transition: all 3s linear;
+}
+
+.rotOnHover:hover {
+	transform: rotateZ(20deg);
+}
