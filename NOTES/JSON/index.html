@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON and JavaScript Objects</title>
+</head>
+<body>
+
+<script type="text/javascript">
+/*
+	var customer = {
+		firstName: 'Tony',
+		lastName: 'Pony',
+		pets: ['dog', 'cat', 'iguana']
+	}
+
+	// dot notation to access info
+	console.log(customer.firstName);
+	console.log(customer.lastName);
+	// access second pet
+	console.log(customer.pets[1]);
+	// log out all of the customer's pets
+	for (var i = 0; i < customer.pets.length; i++) {
+		console.log(customer.pets[i]);
+	}
+
+	customer.age = 45;
+	console.log(customer);
+	customer.age = 46;
+	console.log(customer);
+*/
+
+var myClass = {
+	me: {
+		firstName: 'Tony',
+		lastName: 'Pony',
+		pets: ['dog', 'cat', 'iguana']
+	},
+	others: [
+		{
+		firstName: 'Sally',
+		lastName: 'Omally',
+		pets: ['butterfly', 'bird']
+		},
+		{
+		firstName: 'Billy',
+		lastName: 'Goat',
+		pets: ['snake', 'fish']
+		},
+		{
+		firstName: 'Tara',
+		lastName: 'Ohara',
+		pets: ['geko', 'lizard']
+		}
+	]
+}
+
+//tonys third pet
+console.log(myClass.me.pets[2]);
+//billys last name
+console.log(myClass.others[1].lastName);
+//size of others array
+console.log(myClass.others.length)
+//first name of all students
+for (var i = 0; i < myClass.others.length; i++) {
+	console.log(myClass.others[i].firstName);
+}
+//taras first pet
+console.log(myClass.others[2].pets[0]);
+
+
+</script>
+</body>
+</html>

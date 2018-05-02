@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>HTML5 Geolocation</h3>
+    <div id="map"></div>
+    <script>
+
+      function getLocation() {
+      // conditional to execute the location code only if the browser has Geolocation methods inside the navigator object
+
+      if (navigator.geolocation) {
+        //console.log(navigator.geolocation);
+        navigator.geolocation.getCurrentPosition(initMap);
+      } else {
+        alert('Geolocation is not supported by your browser.')
+      }
+    }
+
+      function initMap(position) {
+        // dummy location
+        var myLocation = {lat: -25.363, lng: 131.044};
+        // overwrite location
+        myLocation.lat = position.coords.latitude;
+        myLocation.lng = position.coords.longitude;
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: myLocation
+        });
+        var marker = new google.maps.Marker({
+          position: myLocation,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=URAPIKEYHERE&callback=getLocation">
+    </script>
+  </body>
+</html>

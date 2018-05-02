@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <title>Modal 2 ways</title>
+  </head>
+  <body>
+    <h1>Modal 2 ways</h1>
+
+    <div class="container" style="padding-top: 100px">
+      <button
+        type="button"
+        class="btn btn-primary btn-lg"
+        data-toggle="modal"
+        data-target="#basicModal">
+        Launch Demo Modal
+      </button>
+        
+      <div class="card card-body bg-light">
+        <pre>
+          a poem that,
+      is broken up to
+        too many lines
+        for     <a href="#" data-toggle="modal" data-target="define">poetic</a>
+    reasons.
+        </pre>
+      </div>
+
+
+      <div
+        class="modal fade"
+        id="basicModal"
+        tab-index="-1"
+        role="dialog"
+        aria-labeled=="myModalLabel">
+        <!-- modal positioning and content -->
+        <div class="modal-dialog" roles="document">
+          <!-- modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel">
+                My first modal
+              </h4>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="close">  
+                X
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>some modal stuff</p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-danger" data-dismiss="modal">close</button>
+              <button class="btn btn-success">save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+        class="modal fade"
+        id="define"
+        tab-index="-1"
+        role="dialog"
+        aria-labeled="defineLabel">
+
+        <div class="modal-dialog" roles="document">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="defineLabel">poetic</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="close">
+              X
+            </button>
+          </div>
+        <div class="modal-body">
+          <p>adjective<br>relating to or used in poetry.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  </body>
+</html>

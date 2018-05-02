@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Delegation</title>
+	<style type="text/css" media="screen">
+		.active {
+			color: red;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<p id="toggleMe">Just a paragraph to toggle classes.</p>
+	<button id="alertBtn"> Click to fire an event with add event listener</button>
+
+	<script type="text/javascript">
+		//annoying alert function
+
+		function alertMe() {
+			alert("annoying alert box");
+		}
+
+		//basic event listener syntax
+		document.getElementById('alertBtn').addEventListener('click', alertMe);
+		//when the alertBtn id is fired, it runs the alertMe
+
+		//function to watch for all DOM content to be loaded, this is where you would add event listeners or any function you want to happen on load
+
+		document.addEventListener('DOMContentLoaded', function() {
+			console.log("dom loaded fully");
+
+			//toggle the active class on click with another anonymous
+			document.getElementById('toggle me').addEventListener('click', function(event) {
+				console.log(event.target);
+
+				var element = event.target;
+
+				element.classList.toggle('active');
+			});
+		})
+
+	</script>
+
+</body>
+</html>
